@@ -12,6 +12,12 @@ Rock >> playAgainst: anotherWeapon [
 ]
 
 { #category : 'as yet unclassified' }
+Rock >> playAgainstLizard [
+
+	^ #rock
+]
+
+{ #category : 'as yet unclassified' }
 Rock >> playAgainstPaper [
 
 	^ #paper
@@ -27,4 +33,10 @@ Rock >> playAgainstRock [
 Rock >> playAgainstScissors [
 
 	^ #rock
+]
+
+{ #category : 'as yet unclassified' }
+Rock >> playAgainstSpock [
+
+	^ #spock
 ]

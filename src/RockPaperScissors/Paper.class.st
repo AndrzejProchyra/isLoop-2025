@@ -12,6 +12,12 @@ Paper >> playAgainst: anotherWeapon [
 ]
 
 { #category : 'as yet unclassified' }
+Paper >> playAgainstLizard [
+
+	^ #lizard
+]
+
+{ #category : 'as yet unclassified' }
 Paper >> playAgainstPaper [
 
 	^ #draw
@@ -27,4 +33,10 @@ Paper >> playAgainstRock [
 Paper >> playAgainstScissors [
 
 	^ #scissors
+]
+
+{ #category : 'as yet unclassified' }
+Paper >> playAgainstSpock [
+
+	^ #paper
 ]

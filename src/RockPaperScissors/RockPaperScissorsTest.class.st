@@ -16,6 +16,15 @@ RockPaperScissorsTest >> setUp [
 ]
 
 { #category : 'tests' }
+RockPaperScissorsTest >> testPapeBeatsRock [
+
+	| result |
+	result := game play: Paper new against: Rock new.
+
+	self assert: result equals: #paper
+]
+
+{ #category : 'tests' }
 RockPaperScissorsTest >> testPaperAgainstPaperIsADraw [
 
 	| result |
@@ -61,24 +70,6 @@ RockPaperScissorsTest >> testPaperIsBeatenByScissors [
 ]
 
 { #category : 'tests' }
-RockPaperScissorsTest >> testPaperLosesAgainstScissors [
-
-	| result |
-	result := game play: Paper new against: Scissors new.
-
-	self assert: result equals: #scissors
-]
-
-{ #category : 'tests' }
-RockPaperScissorsTest >> testPaperWinsAgainstRock [
-
-	| result |
-	result := game play: Paper new against: Rock new.
-
-	self assert: result equals: #paper
-]
-
-{ #category : 'tests' }
 RockPaperScissorsTest >> testRockAgainstRockIsADraw [
 
 	| result |
@@ -96,15 +87,16 @@ RockPaperScissorsTest >> testRockBeatsLizard [
 ]
 
 { #category : 'tests' }
-RockPaperScissorsTest >> testRockIsBeatenBySpock [
-	| result |
-	result := game play: Rock new against: Spock new.
+RockPaperScissorsTest >> testRockBeatsScissors [
 
-	self assert: result equals: #spock
+	| result |
+	result := game play: Rock new against: Scissors new.
+
+	self assert: result equals: #rock
 ]
 
 { #category : 'tests' }
-RockPaperScissorsTest >> testRockLosesAgainstPaper [
+RockPaperScissorsTest >> testRockIsBeatenByPaper [
 
 	| result |
 	result := game play: Rock new against: Paper new.
@@ -113,12 +105,11 @@ RockPaperScissorsTest >> testRockLosesAgainstPaper [
 ]
 
 { #category : 'tests' }
-RockPaperScissorsTest >> testRockWinsAgainstScissors [
-
+RockPaperScissorsTest >> testRockIsBeatenBySpock [
 	| result |
-	result := game play: Rock new against: Scissors new.
+	result := game play: Rock new against: Spock new.
 
-	self assert: result equals: #rock
+	self assert: result equals: #spock
 ]
 
 { #category : 'tests' }

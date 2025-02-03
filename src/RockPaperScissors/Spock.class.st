@@ -6,6 +6,18 @@ Class {
 }
 
 { #category : 'as yet unclassified' }
+Spock >> playAgainst: opponent [
+
+	^ opponent playAgainstSpock
+]
+
+{ #category : 'as yet unclassified' }
+Spock >> playAgainstLizard [
+
+	^ #spock
+]
+
+{ #category : 'as yet unclassified' }
 Spock >> playAgainstPaper [
 
 	^ #paper
@@ -21,4 +33,10 @@ Spock >> playAgainstRock [
 Spock >> playAgainstScissors [
 
 	^ #spock
+]
+
+{ #category : 'as yet unclassified' }
+Spock >> playAgainstSpock [
+
+	^ #draw
 ]

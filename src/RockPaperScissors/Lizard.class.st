@@ -6,6 +6,18 @@ Class {
 }
 
 { #category : 'as yet unclassified' }
+Lizard >> playAgainst: opponent [
+
+	^ opponent playAgainstLizard
+]
+
+{ #category : 'as yet unclassified' }
+Lizard >> playAgainstLizard [
+
+	^ #draw
+]
+
+{ #category : 'as yet unclassified' }
 Lizard >> playAgainstPaper [
 
 	^ #lizard
@@ -21,4 +33,10 @@ Lizard >> playAgainstRock [
 Lizard >> playAgainstScissors [
 
 	^ #scissors
+]
+
+{ #category : 'as yet unclassified' }
+Lizard >> playAgainstSpock [
+
+	^ #spock
 ]
