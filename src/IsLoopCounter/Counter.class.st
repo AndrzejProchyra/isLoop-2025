@@ -1,0 +1,64 @@
+"
+`Counter` is a simple concrete class which supports incrementing and
+decrementing.
+Its API is
+- `decrement` and `increment`
+- `count`
+Its creation message is `startAt:`
+"
+Class {
+	#name : 'Counter',
+	#superclass : 'Object',
+	#instVars : [
+		'count'
+	],
+	#category : 'IsLoopCounter',
+	#package : 'IsLoopCounter'
+}
+
+{ #category : 'accessing' }
+Counter class >> startingAt: anInteger [
+
+	^ Counter new count: anInteger
+]
+
+{ #category : 'accessing' }
+Counter >> count [
+
+	^ count
+]
+
+{ #category : 'accessing' }
+Counter >> count: anInteger [
+
+	count := anInteger
+]
+
+{ #category : 'API' }
+Counter >> decrement [
+
+	count = 0 ifTrue: [ ^ self ].
+	count := count - 1
+]
+
+{ #category : 'accessing' }
+Counter >> increment [
+
+	count := count + 1
+]
+
+{ #category : 'initialization' }
+Counter >> initialize [
+
+	super initialize.
+	count := 0
+]
+
+{ #category : 'printing' }
+Counter >> printOn: aStream [
+
+	super printOn: aStream.
+	aStream
+		nextPutAll: ' with value: ';
+		print: count
+]

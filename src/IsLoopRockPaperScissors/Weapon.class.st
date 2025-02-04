@@ -1,8 +1,8 @@
 Class {
 	#name : 'Weapon',
 	#superclass : 'Object',
-	#category : 'RockPaperScissors',
-	#package : 'RockPaperScissors'
+	#category : 'IsLoopRockPaperScissors',
+	#package : 'IsLoopRockPaperScissors'
 }
 
 { #category : 'as yet unclassified' }

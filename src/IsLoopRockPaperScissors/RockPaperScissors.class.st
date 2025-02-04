@@ -4,8 +4,8 @@ Class {
 	#instVars : [
 		'winningConditions'
 	],
-	#category : 'RockPaperScissors',
-	#package : 'RockPaperScissors'
+	#category : 'IsLoopRockPaperScissors',
+	#package : 'IsLoopRockPaperScissors'
 }
 
 { #category : 'as yet unclassified' }

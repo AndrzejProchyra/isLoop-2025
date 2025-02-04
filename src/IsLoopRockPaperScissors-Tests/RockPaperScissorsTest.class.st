@@ -4,8 +4,8 @@ Class {
 	#instVars : [
 		'game'
 	],
-	#category : 'RockPaperScissors',
-	#package : 'RockPaperScissors'
+	#category : 'IsLoopRockPaperScissors-Tests',
+	#package : 'IsLoopRockPaperScissors-Tests'
 }
 
 { #category : 'running' }
