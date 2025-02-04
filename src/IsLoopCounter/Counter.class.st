@@ -19,7 +19,7 @@ Class {
 { #category : 'accessing' }
 Counter class >> startingAt: anInteger [
 
-	^ Counter new count: anInteger
+	^ self new count: anInteger
 ]
 
 { #category : 'accessing' }
