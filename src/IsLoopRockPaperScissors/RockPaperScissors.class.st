@@ -1,9 +1,6 @@
 Class {
 	#name : 'RockPaperScissors',
 	#superclass : 'Object',
-	#instVars : [
-		'winningConditions'
-	],
 	#category : 'IsLoopRockPaperScissors',
 	#package : 'IsLoopRockPaperScissors'
 }
