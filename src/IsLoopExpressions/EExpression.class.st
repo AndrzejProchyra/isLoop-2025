@@ -5,6 +5,11 @@ Class {
 	#package : 'IsLoopExpressions'
 }
 
+{ #category : 'as yet unclassified' }
+EExpression >> evaluate [
+	^ self subclassResponsibility
+]
+
 { #category : 'arithmetic' }
 EExpression >> negated [
 
