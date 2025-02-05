@@ -50,3 +50,9 @@ EAdditionTest >> testEvaluateWithNegation [
 				 left: ep2) evaluate
 		equals: -2
 ]
+
+{ #category : 'tests' }
+EAdditionTest >> testPrinting [
+
+	self assert: EAddition fivePlusThree printString equals: '( 5 + 3 )'
+]

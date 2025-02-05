@@ -21,3 +21,9 @@ ENegationTest >> testEvaluateWithClassCreationMessage [
 		assert: (ENegation expression: (EConstant value: 5)) evaluate
 		equals: -5
 ]
+
+{ #category : 'tests' }
+ENegationTest >> testPrinting [
+
+	self assert: EConstant constant3 negated printString equals: '- 3'
+]

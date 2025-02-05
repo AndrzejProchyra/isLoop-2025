@@ -25,3 +25,11 @@ ENegation >> expression: anExpression [
 
 	expression := anExpression
 ]
+
+{ #category : 'printing' }
+ENegation >> printOn: aStream [
+
+	aStream
+		nextPutAll: '- ';
+		print: expression
+]

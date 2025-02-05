@@ -34,6 +34,12 @@ EConstant >> evaluate [
 	^ value
 ]
 
+{ #category : 'printing' }
+EConstant >> printOn: aStream [
+
+	aStream print: value
+]
+
 { #category : 'accessing' }
 EConstant >> value: anInteger [
 

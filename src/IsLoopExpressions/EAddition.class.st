@@ -39,6 +39,17 @@ EAddition >> left: anExpression [
 	left := anExpression
 ]
 
+{ #category : 'printing' }
+EAddition >> printOn: aStream [
+
+	aStream
+		nextPutAll: '( ';
+		print: left;
+		nextPutAll: ' + ';
+		print: right;
+		nextPutAll: ' )'
+]
+
 { #category : 'accessing' }
 EAddition >> right: anExpression [
 
