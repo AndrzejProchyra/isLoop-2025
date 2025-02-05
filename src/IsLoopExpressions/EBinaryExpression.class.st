@@ -24,6 +24,12 @@ EBinaryExpression >> left: anExpression [
 ]
 
 { #category : 'printing' }
+EBinaryExpression >> operatorString [
+
+	self subclassResponsibility
+]
+
+{ #category : 'printing' }
 EBinaryExpression >> printOn: aStream [
 
 	aStream
