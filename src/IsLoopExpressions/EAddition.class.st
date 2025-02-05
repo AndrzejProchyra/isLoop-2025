@@ -1,10 +1,6 @@
 Class {
 	#name : 'EAddition',
-	#superclass : 'EExpression',
-	#instVars : [
-		'right',
-		'left'
-	],
+	#superclass : 'EBinaryExpression',
 	#category : 'IsLoopExpressions',
 	#package : 'IsLoopExpressions'
 }
@@ -33,12 +29,6 @@ EAddition >> evaluate [
 	^ left evaluate + right evaluate
 ]
 
-{ #category : 'accessing' }
-EAddition >> left: anExpression [
-
-	left := anExpression
-]
-
 { #category : 'printing' }
 EAddition >> printOn: aStream [
 
@@ -48,10 +38,4 @@ EAddition >> printOn: aStream [
 		nextPutAll: ' + ';
 		print: right;
 		nextPutAll: ' )'
-]
-
-{ #category : 'accessing' }
-EAddition >> right: anExpression [
-
-	right := anExpression
 ]

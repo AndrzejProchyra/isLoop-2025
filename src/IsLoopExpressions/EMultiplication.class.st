@@ -1,10 +1,6 @@
 Class {
 	#name : 'EMultiplication',
-	#superclass : 'EExpression',
-	#instVars : [
-		'right',
-		'left'
-	],
+	#superclass : 'EBinaryExpression',
 	#category : 'IsLoopExpressions',
 	#package : 'IsLoopExpressions'
 }
@@ -33,12 +29,6 @@ EMultiplication >> evaluate [
 	^ left evaluate * right evaluate
 ]
 
-{ #category : 'accessing' }
-EMultiplication >> left: anExpression [
-
-	left := anExpression
-]
-
 { #category : 'printing' }
 EMultiplication >> printOn: aStream [
 
@@ -48,10 +38,4 @@ EMultiplication >> printOn: aStream [
 		nextPutAll: ' * ';
 		print: right;
 		nextPutAll: ' )'
-]
-
-{ #category : 'accessing' }
-EMultiplication >> right: anExpression [
-
-	right := anExpression
 ]
