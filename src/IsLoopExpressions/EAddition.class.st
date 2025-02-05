@@ -15,14 +15,6 @@ EAddition class >> fivePlusThree [
 	^ self left: ep1 right: ep2
 ]
 
-{ #category : 'instance creation' }
-EAddition class >> left: anExp right: anExp2 [
-
-	^ self new
-		  left: anExp;
-		  right: anExp2
-]
-
 { #category : 'public access' }
 EAddition >> evaluate [
 

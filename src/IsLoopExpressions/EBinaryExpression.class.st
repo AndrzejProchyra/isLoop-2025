@@ -10,20 +10,17 @@ Class {
 }
 
 { #category : 'as yet unclassified' }
-EBinaryExpression class >> left: anExp right: anExp2 [ 
-	^ self subclassResponsibility
+EBinaryExpression class >> left: anExp right: anExp2 [
+
+	^ self new
+		  left: anExp;
+		  right: anExp2
 ]
 
 { #category : 'accessing' }
 EBinaryExpression >> left: anExpression [
 
 	left := anExpression
-]
-
-{ #category : 'printing' }
-EBinaryExpression >> operatorString [
-
-	self subclassResponsibility
 ]
 
 { #category : 'printing' }

@@ -15,14 +15,6 @@ EMultiplication class >> fiveTimesThree [
 	^ self left: ep1 right: ep2
 ]
 
-{ #category : 'instance creation' }
-EMultiplication class >> left: anExp right: anExp2 [
-
-	^ self new
-		  left: anExp;
-		  right: anExp2
-]
-
 { #category : 'public access' }
 EMultiplication >> evaluate [
 
