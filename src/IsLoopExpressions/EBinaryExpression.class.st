@@ -9,6 +9,11 @@ Class {
 	#package : 'IsLoopExpressions'
 }
 
+{ #category : 'as yet unclassified' }
+EBinaryExpression class >> left: anExp right: anExp2 [ 
+	^ self subclassResponsibility
+]
+
 { #category : 'accessing' }
 EBinaryExpression >> left: anExpression [
 
