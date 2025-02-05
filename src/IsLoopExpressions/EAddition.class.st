@@ -30,6 +30,12 @@ EAddition >> evaluate [
 ]
 
 { #category : 'printing' }
+EAddition >> operatorString [
+
+	^ ' + '
+]
+
+{ #category : 'printing' }
 EAddition >> printOn: aStream [
 
 	aStream

@@ -30,6 +30,12 @@ EMultiplication >> evaluate [
 ]
 
 { #category : 'printing' }
+EMultiplication >> operatorString [
+
+	^ ' * '
+]
+
+{ #category : 'printing' }
 EMultiplication >> printOn: aStream [
 
 	aStream
