@@ -15,9 +15,9 @@ ENegation class >> expression: anExpression [
 ]
 
 { #category : 'public access' }
-ENegation >> evaluate [
+ENegation >> evaluateWith: aBindingDictionary [
 
-	^ expression evaluate negated
+	^ (expression evaluateWith: aBindingDictionary) negated
 ]
 
 { #category : 'instance creation' }

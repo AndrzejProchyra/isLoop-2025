@@ -16,9 +16,9 @@ EMultiplication class >> fiveTimesThree [
 ]
 
 { #category : 'public access' }
-EMultiplication >> evaluate [
+EMultiplication >> evaluateWith: anObject [
 
-	^ left evaluate * right evaluate
+	^ (left evaluateWith: nil) * (right evaluateWith: nil)
 ]
 
 { #category : 'printing' }

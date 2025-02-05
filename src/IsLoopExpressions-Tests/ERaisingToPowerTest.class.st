@@ -13,7 +13,7 @@ ERaisingToPowerTest >> testEvaluate [
 	ep2 := EConstant constant3.
 
 	self
-		assert: (ERaisingToPower left: ep1 right: ep2) evaluate
+		assert: ((ERaisingToPower left: ep1 right: ep2) evaluateWith: nil)
 		equals: 125
 ]
 

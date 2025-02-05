@@ -6,9 +6,9 @@ Class {
 }
 
 { #category : 'as yet unclassified' }
-EDivision >> evaluate [
+EDivision >> evaluateWith: anObject [
 
-	^ left evaluate / right evaluate
+	^ (left evaluateWith: nil) / (right evaluateWith: nil)
 ]
 
 { #category : 'printing' }

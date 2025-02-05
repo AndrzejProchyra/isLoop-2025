@@ -6,9 +6,9 @@ Class {
 }
 
 { #category : 'as yet unclassified' }
-ERaisingToPower >> evaluate [
+ERaisingToPower >> evaluateWith: anObject [
 
-	^ left evaluate raisedTo: right evaluate
+	^ (left evaluateWith: nil) raisedTo: (right evaluateWith: nil)
 ]
 
 { #category : 'printing' }

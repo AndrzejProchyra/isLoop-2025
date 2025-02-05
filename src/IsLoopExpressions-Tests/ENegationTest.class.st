@@ -10,7 +10,8 @@ ENegationTest >> testEvaluate [
 
 	self
 		assert:
-		(ENegation new expression: (EConstant new value: 5)) evaluate
+			((ENegation new expression: (EConstant new value: 5))
+				 evaluateWith: nil)
 		equals: -5
 ]
 
@@ -18,7 +19,8 @@ ENegationTest >> testEvaluate [
 ENegationTest >> testEvaluateWithClassCreationMessage [
 
 	self
-		assert: (ENegation expression: (EConstant value: 5)) evaluate
+		assert:
+		((ENegation expression: (EConstant value: 5)) evaluateWith: nil)
 		equals: -5
 ]
 

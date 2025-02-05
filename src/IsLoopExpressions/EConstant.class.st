@@ -29,7 +29,7 @@ EConstant class >> value: anInteger [
 ]
 
 { #category : 'public access' }
-EConstant >> evaluate [
+EConstant >> evaluateWith: anObject [
 
 	^ value
 ]

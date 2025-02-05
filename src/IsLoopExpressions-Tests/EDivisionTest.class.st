@@ -12,7 +12,9 @@ EDivisionTest >> testEvaluate [
 	ep1 := EConstant value: 12.
 	ep2 := EConstant value: 4.
 
-	self assert: (EDivision left: ep1 right: ep2) evaluate equals: 3
+	self
+		assert: ((EDivision left: ep1 right: ep2) evaluateWith: nil)
+		equals: 3
 ]
 
 { #category : 'tests' }

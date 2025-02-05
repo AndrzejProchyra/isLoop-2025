@@ -6,7 +6,8 @@ Class {
 }
 
 { #category : 'as yet unclassified' }
-EExpression >> evaluate [
+EExpression >> evaluateWith: aBindingDictionary [
+
 	^ self subclassResponsibility
 ]
 
