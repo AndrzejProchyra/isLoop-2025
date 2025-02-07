@@ -17,12 +17,13 @@ EarthMap >> countries [
 { #category : 'as yet unclassified' }
 EarthMap >> importCountriesFrom: aFileName [
 
-	| xmlTree |
+	| xmlTree countryNodes |
 	xmlTree := self xmlTreeFromFile: aFileName.
+	countryNodes := xmlTree nodes first nodes.
 
-	xmlTree nodes first nodes do: [ :node |
-		node class = XMLElement ifTrue: [
-			countries add: (EarthMapCountry new fromXML: node) ] ]
+	countryNodes
+		select: [ :node | node isElement ]
+		thenDo: [ :node | self importCountryFromXMLNode: node ]
 ]
 
 { #category : 'as yet unclassified' }
