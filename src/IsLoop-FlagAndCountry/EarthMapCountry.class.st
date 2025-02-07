@@ -22,6 +22,19 @@ EarthMapCountry >> code [
 	^ code
 ]
 
+{ #category : 'printing' }
+EarthMapCountry >> flagForCountryCode: aString [
+
+	| request pngArray |
+	request := ZnClient new.
+	request get:
+		'https://flagcdn.com/w320/' , aString asLowercase , '.png'.
+	request isSuccess ifTrue: [
+		pngArray := request response contents.
+		^ ImageReadWriter formFromStream: (ReadStream on: pngArray) ].
+	^ BorderedMorph new asForm
+]
+
 { #category : 'instance creation' }
 EarthMapCountry >> fromXML: anXMLElement [
 
@@ -41,6 +54,15 @@ EarthMapCountry >> inspectorShape [
 	^ SpRoassalInspectorPresenter new
 		  canvas: canvas;
 		  yourself
+]
+
+{ #category : 'as yet unclassified' }
+EarthMapCountry >> inspectorShape2 [
+
+	<inspectorPresentationOrder: 0 title: 'flag'>
+	
+	^ SpImagePresenter new 
+		image: (self flagForCountryCode: code); yourself
 ]
 
 { #category : 'accessing' }
