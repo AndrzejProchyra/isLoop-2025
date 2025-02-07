@@ -15,6 +15,12 @@ EAddition class >> fivePlusThree [
 	^ self left: ep1 right: ep2
 ]
 
+{ #category : 'visiting' }
+EAddition >> accept: aVisitor [
+
+	^ aVisitor visitAddition: self
+]
+
 { #category : 'public access' }
 EAddition >> evaluateWith: aBindingDictionary [
 

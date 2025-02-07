@@ -15,6 +15,12 @@ EMultiplication class >> fiveTimesThree [
 	^ self left: ep1 right: ep2
 ]
 
+{ #category : 'visiting' }
+EMultiplication >> accept: aVisitor [
+
+	^ aVisitor visitMultiplication: self
+]
+
 { #category : 'public access' }
 EMultiplication >> evaluateWith: anObject [
 

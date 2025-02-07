@@ -14,10 +14,22 @@ ENegation class >> expression: anExpression [
 	^ self new expression: anExpression
 ]
 
-{ #category : 'public access' }
-ENegation >> evaluateWith: aBindingDictionary [
+{ #category : 'visiting' }
+ENegation >> accept: aVisitor [
 
-	^ (expression evaluateWith: aBindingDictionary) negated
+	^ aVisitor visitNegation: self
+]
+
+{ #category : 'public access' }
+ENegation >> evaluateWith: anObject [
+
+	^ (expression evaluateWith: anObject ) negated
+]
+
+{ #category : 'accessing' }
+ENegation >> expression [
+
+	^ expression
 ]
 
 { #category : 'instance creation' }

@@ -18,6 +18,12 @@ EBinaryExpression class >> left: anExp right: anExp2 [
 ]
 
 { #category : 'accessing' }
+EBinaryExpression >> left [
+
+	^ left
+]
+
+{ #category : 'accessing' }
 EBinaryExpression >> left: anExpression [
 
 	left := anExpression
@@ -38,6 +44,12 @@ EBinaryExpression >> printOn: aStream [
 		nextPutAll: self operatorString;
 		print: right;
 		nextPutAll: ' )'
+]
+
+{ #category : 'accessing' }
+EBinaryExpression >> right [
+
+	^ right
 ]
 
 { #category : 'accessing' }

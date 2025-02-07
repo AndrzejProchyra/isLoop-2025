@@ -49,7 +49,7 @@ EAdditionTest >> testEvaluateWithNegation [
 	self
 		assert: ((EAddition new
 				  right: ep1;
-				  left: ep2) evaluateWith: nil)
+				  left: ep2) evaluateWith: Dictionary new)
 		equals: -2
 ]
 
