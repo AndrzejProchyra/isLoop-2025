@@ -6,6 +6,18 @@ Class {
 }
 
 { #category : 'tests' }
+EEvaluaingVisitorTest >> testDivisionByZeroThrowsException [
+
+	| expression |
+	expression := EDivision
+		              numerator: EConstant constant5
+		              denominator: (EConstant value: 0).
+	self
+		should: [ expression accept: EEvaluatingVisitor new ]
+		raise: EZeroDenominator
+]
+
+{ #category : 'tests' }
 EEvaluaingVisitorTest >> testVisitAdditionReturnsResult [
 
 	| fivePlusThree result |
