@@ -1,9 +1,31 @@
 Class {
 	#name : 'EEvaluatingVisitor',
 	#superclass : 'Object',
+	#instVars : [
+		'bindings'
+	],
 	#category : 'IsLoopExpressions',
 	#package : 'IsLoopExpressions'
 }
+
+{ #category : 'accessing' }
+EEvaluatingVisitor >> at: anId put: aValue [
+
+	bindings at: anId put: aValue
+]
+
+{ #category : 'accessing' }
+EEvaluatingVisitor >> bindings: aDictionary [
+
+	bindings := aDictionary
+]
+
+{ #category : 'initialization' }
+EEvaluatingVisitor >> initialize [
+
+	super initialize.
+	bindings := Dictionary new
+]
 
 { #category : 'visiting' }
 EEvaluatingVisitor >> visitAddition: anEAddition [
@@ -40,4 +62,17 @@ EEvaluatingVisitor >> visitMultiplication: anEMultiplication [
 EEvaluatingVisitor >> visitNegation: anENegation [
 
 	^ (anENegation expression accept: self) negated
+]
+
+{ #category : 'visiting' }
+EEvaluatingVisitor >> visitRaisingToPower: anERaisingToPower [
+
+	^ (anERaisingToPower left accept: self)
+	** (anERaisingToPower right accept: self)
+]
+
+{ #category : 'visiting' }
+EEvaluatingVisitor >> visitVariable: anEVariable [
+
+	^ bindings at: anEVariable id
 ]

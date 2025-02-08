@@ -34,12 +34,6 @@ EConstant >> accept: aVisitor [
 	^ aVisitor visitConstant: self
 ]
 
-{ #category : 'public access' }
-EConstant >> evaluateWith: anObject [
-
-	^ value
-]
-
 { #category : 'printing' }
 EConstant >> printOn: aStream [
 

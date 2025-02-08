@@ -21,26 +21,8 @@ EAddition >> accept: aVisitor [
 	^ aVisitor visitAddition: self
 ]
 
-{ #category : 'public access' }
-EAddition >> evaluateWith: aBindingDictionary [
-
-	^ (left evaluateWith: aBindingDictionary)
-	  + (right evaluateWith: aBindingDictionary)
-]
-
 { #category : 'printing' }
 EAddition >> operatorString [
 
 	^ ' + '
-]
-
-{ #category : 'printing' }
-EAddition >> printOn: aStream [
-
-	aStream
-		nextPutAll: '( ';
-		print: left;
-		nextPutAll: ' + ';
-		print: right;
-		nextPutAll: ' )'
 ]

@@ -5,10 +5,10 @@ Class {
 	#package : 'IsLoopExpressions'
 }
 
-{ #category : 'as yet unclassified' }
-ERaisingToPower >> evaluateWith: anObject [
+{ #category : 'visiting' }
+ERaisingToPower >> accept: anEEvaluatingVisitor [
 
-	^ (left evaluateWith: nil) raisedTo: (right evaluateWith: nil)
+	^ anEEvaluatingVisitor visitRaisingToPower: self
 ]
 
 { #category : 'printing' }

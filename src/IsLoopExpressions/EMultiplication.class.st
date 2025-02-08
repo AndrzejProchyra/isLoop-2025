@@ -21,25 +21,8 @@ EMultiplication >> accept: aVisitor [
 	^ aVisitor visitMultiplication: self
 ]
 
-{ #category : 'public access' }
-EMultiplication >> evaluateWith: anObject [
-
-	^ (left evaluateWith: nil) * (right evaluateWith: nil)
-]
-
 { #category : 'printing' }
 EMultiplication >> operatorString [
 
 	^ ' * '
-]
-
-{ #category : 'printing' }
-EMultiplication >> printOn: aStream [
-
-	aStream
-		nextPutAll: '( ';
-		print: left;
-		nextPutAll: ' * ';
-		print: right;
-		nextPutAll: ' )'
 ]

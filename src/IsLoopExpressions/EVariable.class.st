@@ -11,19 +11,21 @@ Class {
 { #category : 'accessing' }
 EVariable class >> id: aSymbol [
 
-	^ self new id: aSymbol
+	^ self new
+		  id: aSymbol;
+		  yourself
 ]
 
-{ #category : 'as yet unclassified' }
-EVariable >> evaluateWith: aBindingDictionary [
+{ #category : 'visiting' }
+EVariable >> accept: aVisitor [
 
-	^ aBindingDictionary at: id
+	^ aVisitor visitVariable: self
 ]
 
-{ #category : 'as yet unclassified' }
-EVariable >> evaluateWithTemp: aBindingDictionary [
+{ #category : 'accessing' }
+EVariable >> id [
 
-	^ aBindingDictionary at: id
+	^ id
 ]
 
 { #category : 'accessing' }

@@ -25,12 +25,6 @@ EDivision >> denominator [
 	^ right
 ]
 
-{ #category : 'as yet unclassified' }
-EDivision >> evaluateWith: anObject [
-
-	^ (left evaluateWith: nil) / (right evaluateWith: nil)
-]
-
 { #category : 'private' }
 EDivision >> numerator [
 

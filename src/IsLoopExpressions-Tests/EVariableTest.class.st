@@ -10,7 +10,7 @@ EVariableTest >> testValueOfX [
 
 	self
 		assert:
-		((EVariable id: #x) evaluateWithTemp: { (#x -> 10) } asDictionary)
+		((EVariable id: #x) evaluateWith: { (#x -> 10) } asDictionary)
 		equals: 10
 ]
 
