@@ -61,6 +61,15 @@ RbsBoard >> basicPrintOnInspector [
 		yourself
 ]
 
+{ #category : 'building' }
+RbsBoard >> buildMapWidth: x height: y [
+
+	map := CTArray2D 
+				width: x height: y.
+	map rowsAndColumnsDo: [ :row :column |
+			self initializeElement: self groundClass new atX: column atY: row ]
+]
+
 { #category : 'accessing' }
 RbsBoard >> columnNumber [
 	^ map numberOfColumns
@@ -88,6 +97,15 @@ RbsBoard >> groundClass [
 { #category : 'accessing' }
 RbsBoard >> height [
 	^ map height
+]
+
+{ #category : 'building' }
+RbsBoard >> initializeElement: anElement atX: xCoord atY: yCoord [
+
+	anElement setBoard: self.
+	anElement basicPosition: xCoord @ yCoord.
+	self atX: xCoord atY: yCoord put: anElement.
+	anElement postCreationAction.
 ]
 
 { #category : 'accessing' }

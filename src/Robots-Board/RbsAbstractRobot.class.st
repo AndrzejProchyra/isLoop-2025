@@ -16,3 +16,10 @@ Class {
 RbsAbstractRobot class >> textualMapCharacter [
 	^ $X
 ]
+
+{ #category : 'accessing' }
+RbsAbstractRobot >> x: xCoord y: yCoord [
+	previousTile := self board atX: xCoord atY: yCoord.
+	super x: xCoord y: yCoord.
+	
+]
