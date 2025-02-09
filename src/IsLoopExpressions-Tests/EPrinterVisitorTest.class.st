@@ -12,3 +12,13 @@ EPrinterVisitorTest >> testPrintConstant [
 		assert: (EConstant constant5 accept: EPrintingVisitor new)
 		equals: '5'
 ]
+
+{ #category : 'tests' }
+EPrinterVisitorTest >> testPrintVariable [
+
+	| variable visitor |
+	variable := EVariable id: #x.
+	visitor := EPrintingVisitor new at: #x put: 7.
+
+	self assert: (variable accept: visitor) equals: 7
+]

@@ -1,6 +1,6 @@
 Class {
 	#name : 'EPrintingVisitor',
-	#superclass : 'Object',
+	#superclass : 'EVisitor',
 	#category : 'IsLoopExpressions',
 	#package : 'IsLoopExpressions'
 }
@@ -9,4 +9,10 @@ Class {
 EPrintingVisitor >> visitConstant: anEConstant [
 
 	^ anEConstant value printString
+]
+
+{ #category : 'visiting' }
+EPrintingVisitor >> visitVariable: anEVariable [
+
+	^ bindings at: anEVariable id
 ]

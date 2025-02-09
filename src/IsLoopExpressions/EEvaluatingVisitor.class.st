@@ -1,30 +1,14 @@
 Class {
 	#name : 'EEvaluatingVisitor',
-	#superclass : 'Object',
-	#instVars : [
-		'bindings'
-	],
+	#superclass : 'EVisitor',
 	#category : 'IsLoopExpressions',
 	#package : 'IsLoopExpressions'
 }
 
 { #category : 'accessing' }
-EEvaluatingVisitor >> at: anId put: aValue [
-
-	bindings at: anId put: aValue
-]
-
-{ #category : 'accessing' }
 EEvaluatingVisitor >> bindings: aDictionary [
 
 	bindings := aDictionary
-]
-
-{ #category : 'initialization' }
-EEvaluatingVisitor >> initialize [
-
-	super initialize.
-	bindings := Dictionary new
 ]
 
 { #category : 'visiting' }
