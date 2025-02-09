@@ -1,12 +1,12 @@
 Class {
-	#name : 'EPrinterVisitorTest',
+	#name : 'EPrintingVisitorTest',
 	#superclass : 'TestCase',
 	#category : 'IsLoopExpressions-Tests',
 	#package : 'IsLoopExpressions-Tests'
 }
 
 { #category : 'tests' }
-EPrinterVisitorTest >> testPrintConstant [
+EPrintingVisitorTest >> testPrintConstant [
 
 	self
 		assert: (EConstant constant5 accept: EPrintingVisitor new)
@@ -14,7 +14,7 @@ EPrinterVisitorTest >> testPrintConstant [
 ]
 
 { #category : 'tests' }
-EPrinterVisitorTest >> testPrintVariable [
+EPrintingVisitorTest >> testPrintVariable [
 
 	| variable visitor |
 	variable := EVariable id: #x.
