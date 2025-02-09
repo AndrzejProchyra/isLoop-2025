@@ -25,3 +25,8 @@ EVisitor >> initialize [
 EVisitor >> visitConstant: anEConstant [ 
 	^ self subclassResponsibility
 ]
+
+{ #category : 'as yet unclassified' }
+EVisitor >> visitVariable: anEVariable [ 
+	^ self subclassResponsibility
+]
